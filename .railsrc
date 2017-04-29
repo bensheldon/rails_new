@@ -1,0 +1,5 @@
+--database=postgresql
+--skip-test
+--skip-turbolinks
+--skip-action-cable
+--template rails_template.rb
