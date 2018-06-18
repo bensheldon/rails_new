@@ -2,4 +2,5 @@
 --skip-test
 --skip-turbolinks
 --skip-action-cable
+--skip-yarn
 --template rails_template.rb
