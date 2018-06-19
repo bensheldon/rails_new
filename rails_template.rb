@@ -14,10 +14,12 @@ gem_group :development, :test do
 end
 
 gem_group :development do
-  gem 'annotate'
+  gem "annotate"
+  gem "spring-commands-rspec"
 end
 
 run "touch app/assets/stylesheets/application.scss"
 run "rm app/assets/stylesheets/application.css"
 
 run "rails g rspec:install"
+run "rake app:updates:bin"
