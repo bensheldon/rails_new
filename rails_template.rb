@@ -15,6 +15,7 @@ end
 
 gem_group :development do
   gem "annotate"
+  gem "eefgilm"
   gem "spring-commands-rspec"
 end
 
@@ -23,3 +24,4 @@ run "rm app/assets/stylesheets/application.css"
 
 run "rails g rspec:install"
 run "rake app:updates:bin"
+run "eefgilm" # cleanup the Gemfile
