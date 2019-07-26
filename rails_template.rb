@@ -1,5 +1,3 @@
-# ~/rails_template.rb
-
 # Ensure copy_file actions have this dir as a source path
 source_paths.unshift(File.dirname(__FILE__))
 
@@ -39,11 +37,10 @@ copy_file "config/secrets.yml"
 run "touch app/assets/stylesheets/application.scss"
 run "rm app/assets/stylesheets/application.css"
 
-run "rails g rspec:install"
+run "bin/rails g rspec:install"
 copy_file "spec/support/capybara_email.rb"
 copy_file "spec/support/factory_bot.rb"
 copy_file "spec/support/system.rb"
 copy_file "spec/support/webmock.rb"
-
-run "rake app:update:bin" # --force ??
-run "eefgilm" # Clean up the Gemfile
+run "yes | bin/rails app:update:bin"
+run "bundle exec eefgilm"
