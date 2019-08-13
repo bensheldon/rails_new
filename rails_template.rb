@@ -16,13 +16,14 @@ gem "pry-rails"
 gem_group :test do
   gem "capybara"
   gem "capybara-email"
-  gem "factory_bot_rails"
+  gem "climate_control"
   gem "launchy", require: false
   gem "selenium-webdriver"
   gem "webmock"
 end
 
 gem_group :development, :test do
+  gem "factory_bot_rails"
   gem "faker"
   gem "rspec-rails"
 end
@@ -47,6 +48,8 @@ copy_file "spec/support/capybara_email.rb"
 copy_file "spec/support/factory_bot.rb"
 copy_file "spec/support/system.rb"
 copy_file "spec/support/webmock.rb"
+run "mkdir -p spec/fixtures/files"
+run "touch spec/fixtures/files/.keep"
 
 run "yes | bin/rails app:update:bin"
 run "bundle exec eefgilm"

@@ -1,7 +1,8 @@
-Rails.application.config.generators do |g|
-  g.test_framework :rspec, fixture: true, views: false, fixture_replacement: :factory_bot, view_specs: false
-  g.fixture_replacement :factory_bot, dir: 'spec/factories'
-  g.helpers false
+Rails.configuration.generators do |g|
+  g.assets false
+  g.helper false
   g.javascripts false
+  g.jbuilder false
   g.stylesheets false
+  g.view_specs false
 end
