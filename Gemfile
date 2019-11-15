@@ -1,4 +1,7 @@
-gem 'rails', '~>5.2.0'
+source 'https://rubygems.org'
+
+gem 'rails', '~>6.0.1'
+gem 'webpacker'
 
 gem 'annotate'
 gem 'bootsnap'
